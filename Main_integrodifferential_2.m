@@ -7,6 +7,7 @@ hh = 1;     % time step
 % Initial values
 % (population size N = 1000) 
 S0 = 1.000;     % S(0)
+
 I0 = 1.000;     % I(0,1) 
 Y0 = 0;         % Y(0,1) 
 C0 = 0;         % C(0,1)
