@@ -4,6 +4,17 @@ T = 10;     % final time
 k = 5;      % final age
 hh = 1;     % time step 
 
+% Initial values
+% (population size N = 1000) 
+S0 = 1.000;     % S(0)
+I0 = 1.000;     % I(0,1) 
+Y0 = 0;         % Y(0,1) 
+C0 = 0;         % C(0,1)
+H0 = 0;         % H(0,1)
+Q0 = 0;         % Q(0,1)
+D0 = 0;         % D(0,1)
+
+% ciao
 
 % Vectors of parameters
 % (random values within realistic intervals are taken;
@@ -65,6 +76,8 @@ rhs = @(t,y) A*y(t) + b(t);
 [Q,t4] = RK_esplicito(@rhs,0,T,Q0,hh,@CooperVerner8);
 % [t4,Q]=ode45(@rhs,[0 T],Q0);
 % Q =@(t) sum(Q);
+
+% ciao
 
 figure;
 plot(t1,I,t2,Y,t3,H,t4,Q);
